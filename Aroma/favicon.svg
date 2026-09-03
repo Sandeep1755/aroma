@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Metallic Gold Foil Gradient -->
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2A3" />
+      <stop offset="25%" stop-color="#F5B738" />
+      <stop offset="50%" stop-color="#C68112" />
+      <stop offset="75%" stop-color="#FCE0AD" />
+      <stop offset="100%" stop-color="#8C4E09" />
+    </linearGradient>
+
+    <!-- Deep Velvet Espresso Gradient -->
+    <linearGradient id="favCrestBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#281F19" />
+      <stop offset="100%" stop-color="#110D0A" />
+    </linearGradient>
+
+    <filter id="favShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <g transform="translate(6, 4)" filter="url(#favShadow)">
+    <!-- Outer Shield with Gold Edge -->
+    <path d="M 26 2 L 48 10 L 48 34 C 48 46 26 53 26 53 C 26 53 4 46 4 34 L 4 10 Z" fill="url(#favGold)" />
+    
+    <!-- Inner Velvet Inset -->
+    <path d="M 26 4.8 L 45.2 11.8 L 45.2 33.2 C 45.2 43.8 26 49.8 26 49.8 C 26 49.8 6.8 43.8 6.8 33.2 L 6.8 11.8 Z" fill="url(#favCrestBg)" stroke="url(#favGold)" stroke-width="0.8" />
+
+    <!-- Sacred Golden Flame -->
+    <path d="M 26 10 C 21 17 21 21 26 25 C 31 21 31 17 26 10 Z" fill="url(#favGold)" />
+    <circle cx="26" cy="18" r="2.2" fill="#FFF2A3" />
+
+    <!-- Stylized Heritage 'AA' Interlock Monogram -->
+    <path d="M 17 40 L 26 22 L 35 40" fill="none" stroke="url(#favGold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 20 34 L 32 34" stroke="url(#favGold)" stroke-width="2.2" stroke-linecap="round" />
+    
+    <!-- Outer accent wing -->
+    <path d="M 13 40 L 26 14 L 39 40" fill="none" stroke="#FFD54F" stroke-width="1.2" opacity="0.65" stroke-linecap="round" />
+
+    <!-- Base Golden Gems -->
+    <circle cx="26" cy="45" r="1.8" fill="url(#favGold)" />
+    <circle cx="21" cy="44" r="1.3" fill="url(#favGold)" />
+    <circle cx="31" cy="44" r="1.3" fill="url(#favGold)" />
+  </g>
+</svg>

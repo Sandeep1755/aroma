@@ -1,0 +1,685 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap');
+
+:root {
+  --royal-gold-light: #fbe29d;
+  --royal-gold: #d49a37;
+  --royal-gold-dark: #8c4e09;
+  --deep-espresso: #15110e;
+  --charcoal-body: #2c2621;
+  --muted-stone: #686158;
+  --pearl-bg: #fdfcf9;
+  --cashmere-surface: #f7f3ec;
+  --luxury-card: #ffffff;
+  --border-gold-subtle: #e8d7c3;
+  --border-gold-hover: #d49a37;
+  --heritage-crimson: #a81c1c;
+  --noble-emerald: #0b7a6f;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  background-color: var(--pearl-bg);
+  color: var(--charcoal-body);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.font-serif-royal {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  letter-spacing: 0.03em;
+}
+
+.font-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f7f3ec;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d49a37, #8c4e09);
+  border-radius: 4px;
+}
+
+/* Luxury Glass Navbar */
+.glass-nav-premium {
+  background: rgba(253, 252, 249, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 154, 55, 0.25);
+  box-shadow: 0 4px 30px -4px rgba(21, 17, 14, 0.07);
+}
+
+/* Mobile & Desktop Responsive Logo Height */
+.nav-brand-logo {
+  height: 2.75rem;
+  max-width: 170px;
+  object-fit: contain;
+}
+
+@media (min-width: 640px) {
+  .nav-brand-logo {
+    height: 4.75rem !important;
+    max-width: 240px;
+  }
+}
+
+/* Touch & Mobile Ergonomic Utilities */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* Ultra-Luxury Elevated Card with Golden Glow on Hover */
+.card-eye-catch {
+  background: #ffffff;
+  border: 1px solid var(--border-gold-subtle);
+  box-shadow: 0 8px 26px -4px rgba(140, 78, 9, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+}
+
+.card-eye-catch:hover {
+  border-color: rgba(212, 154, 55, 0.8);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px -8px rgba(140, 78, 9, 0.18), 0 0 22px rgba(212, 154, 55, 0.2);
+}
+
+/* Eye-Catching Gold Foil Gradients */
+.gradient-saffron-gold,
+.gold-gradient-text {
+  background: linear-gradient(135deg, #ffe599 0%, #e5a83b 40%, #b87311 75%, #8c4e09 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(212, 154, 55, 0.25));
+}
+
+.gold-gradient-text-dark {
+  background: linear-gradient(135deg, #8c4e09 0%, #c88722 50%, #6d3803 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shimmering CTA Button */
+.btn-vibrant-saffron,
+.btn-gold {
+  background: linear-gradient(135deg, #e5a83b 0%, #d49a37 40%, #995508 100%);
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px -2px rgba(140, 78, 9, 0.4);
+  border: 1px solid rgba(251, 226, 157, 0.4);
+}
+
+.btn-vibrant-saffron:hover,
+.btn-gold:hover {
+  background: linear-gradient(135deg, #f5bc51 0%, #e5a83b 40%, #b86b0d 100%);
+  box-shadow: 0 12px 28px -2px rgba(140, 78, 9, 0.55), 0 0 15px rgba(245, 188, 81, 0.35);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-vibrant-saffron::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: rotate(30deg);
+  transition: 0.8s;
+  opacity: 0;
+}
+
+.btn-vibrant-saffron:hover::after {
+  opacity: 1;
+  left: 100%;
+}
+
+.btn-vibrant-emerald {
+  background: linear-gradient(135deg, #0d8a7d 0%, #05664b 100%);
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 6px 20px -2px rgba(5, 102, 75, 0.4);
+  transition: all 0.35s ease;
+  border: 1px solid rgba(134, 239, 172, 0.35);
+}
+
+.btn-vibrant-emerald:hover {
+  background: linear-gradient(135deg, #12a394 0%, #0d8a7d 100%);
+  box-shadow: 0 12px 28px -2px rgba(5, 102, 75, 0.55);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Badges */
+.badge-saffron {
+  background: #fdf6e6;
+  border: 1px solid rgba(212, 154, 55, 0.4);
+  color: #8c4e09;
+  font-weight: 800;
+}
+
+.badge-emerald {
+  background: #ecfdf5;
+  border: 1px solid rgba(5, 150, 105, 0.35);
+  color: #065f46;
+  font-weight: 800;
+}
+
+.badge-ruby {
+  background: #fef2f2;
+  border: 1px solid rgba(168, 28, 28, 0.35);
+  color: #a81c1c;
+  font-weight: 800;
+}
+
+/* Hero Overlay with Cinematic Richness */
+.hero-image-banner {
+  position: relative;
+  background-image: url('hero_banner.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  min-height: 86vh;
+}
+
+.hero-overlay-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(15, 11, 8, 0.95) 0%,
+    rgba(21, 16, 12, 0.90) 42%,
+    rgba(28, 21, 16, 0.58) 68%,
+    rgba(0, 0, 0, 0.20) 100%
+  );
+}
+
+/* Footer Background Image with High-Visibility Overlay */
+.footer-image-banner {
+  position: relative;
+  background-image: url('footer_bg.png');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+.footer-overlay-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(18, 14, 11, 0.68) 0%,
+    rgba(14, 11, 9, 0.72) 50%,
+    rgba(10, 8, 6, 0.82) 100%
+  );
+}
+
+@media (max-width: 1024px) {
+  .hero-image-banner {
+    background-image: url('hero_banner.jpg');
+    background-position: center top;
+    background-size: cover;
+  }
+  .hero-overlay-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 11, 8, 0.82) 0%,
+      rgba(21, 16, 12, 0.88) 50%,
+      rgba(15, 11, 8, 0.95) 100%
+    );
+  }
+}
+
+/* Animated Golden Glow */
+@keyframes warmPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.08); }
+}
+.animate-warm-pulse {
+  animation: warmPulse 6s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float-gentle {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+/* Ticker Ribbon */
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker-move {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 28s linear infinite;
+}
+.ticker-move:hover {
+  animation-play-state: paused;
+}
+
+/* Live Social Proof Popup Notification */
+.social-proof-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 45;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 154, 55, 0.4);
+  box-shadow: 0 16px 36px -6px rgba(140, 78, 9, 0.25);
+  border-radius: 20px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 330px;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(120%);
+  opacity: 0;
+}
+
+.social-proof-toast.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Fixed Floating Contact Icons (Gold Luxury Theme with Dynamic Animations) */
+.right-icons {
+  position: fixed;
+  right: 1.5%;
+  bottom: 20%;
+  z-index: 9999999999999999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: goldFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes goldFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Call Button - Royal Gold Glow & Radar Animation */
+.callme {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #ffe599 0%, #d49a37 45%, #94570b 100%);
+  border: 2px solid #ffffff;
+  z-index: 99999999999999;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(212, 154, 55, 0.55), 0 0 15px rgba(255, 215, 0, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  cursor: pointer;
+}
+
+.callme::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid #d49a37;
+  opacity: 0.8;
+  animation: goldRadarRing 2.2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  pointer-events: none;
+}
+
+.callme:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 12px 30px rgba(212, 154, 55, 0.75), 0 0 25px rgba(255, 215, 0, 0.7);
+}
+
+.callme img,
+.callme i {
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+  animation: phoneWiggle 3s ease-in-out infinite;
+}
+
+.callme i {
+  font-size: 24px;
+  color: #171412;
+}
+
+@keyframes phoneWiggle {
+  0%, 80%, 100% {
+    transform: rotate(0);
+  }
+  85% {
+    transform: rotate(-14deg);
+  }
+  90% {
+    transform: rotate(14deg);
+  }
+  95% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* WhatsApp Button - Vibrant WhatsApp Green & Shimmer */
+.whatsapp-logo1 {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #2fe675 0%, #25d366 50%, #128c7e 100%);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999999999;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6), 0 0 18px rgba(37, 211, 102, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  cursor: pointer;
+}
+
+.whatsapp-logo1::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid #25d366;
+  opacity: 0.85;
+  animation: waRadarRing 2.2s cubic-bezier(0.25, 1, 0.5, 1) infinite 1.1s;
+  pointer-events: none;
+}
+
+.whatsapp-logo1:hover {
+  transform: scale(1.15) rotate(-5deg);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.85), 0 0 25px rgba(37, 211, 102, 0.7);
+}
+
+.whatsapp-logo1 img,
+.whatsapp-logo1 i {
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+  animation: waPulse 2.8s ease-in-out infinite;
+}
+
+.whatsapp-logo1 i {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+@keyframes waPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes waRadarRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+@keyframes goldRadarRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+/* Mobile Fixed Bottom Social & Call Bar - Gold Deluxe Edition */
+.mobile-socialfix {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999999;
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.45);
+  border-top: 2px solid #d49a37;
+  background: #0e271c;
+}
+
+.mobile-socialfix .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.mobile-socialfix .col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.whatapp-mob {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.whatapp-mob::after,
+.call-mob::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: goldShimmerBar 3.5s infinite;
+}
+
+@keyframes goldShimmerBar {
+  0% {
+    left: -100%;
+  }
+  40%, 100% {
+    left: 200%;
+  }
+}
+
+.call-mob {
+  background: linear-gradient(135deg, #d49a37 0%, #94570b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.whatapp-mob img {
+  width: 36px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 6px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  animation: waPulse 2.8s ease-in-out infinite;
+}
+
+.call-mob img {
+  width: 32px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 6px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  animation: phoneWiggle 3s ease-in-out infinite;
+}
+
+.whatapp-mob a,
+.call-mob a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  padding: 10px 6px;
+  transition: all 0.2s ease;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.call-mob a {
+  color: #fffdec;
+}
+
+.whatapp-mob a:hover,
+.call-mob a:hover {
+  filter: brightness(1.15);
+}
+
+/* Helper Utilities */
+.position-fixed { position: fixed !important; }
+.w-100 { width: 100% !important; }
+.m-0 { margin: 0 !important; }
+.p-2 { padding: 0.5rem !important; }
+.mt-3 { margin-top: 1rem !important; }
+.text-center { text-align: center !important; }
+.text-white { color: #ffffff !important; }
+.fw-bold { font-weight: 700 !important; }
+.text-decoration-none { text-decoration: none !important; }
+
+@media (max-width: 575.98px) {
+  .d-sm-none { display: block !important; }
+  .d-sm-block,
+  .right-icons.d-none.d-sm-block,
+  .right-icons { display: none !important; }
+  .mobile-socialfix.d-block.d-sm-none { display: block !important; }
+}
+
+@media (min-width: 576px) {
+  .d-sm-none,
+  .mobile-socialfix.d-block.d-sm-none,
+  .mobile-socialfix { display: none !important; }
+  .d-sm-block,
+  .right-icons.d-none.d-sm-block,
+  .right-icons { display: flex !important; }
+}
+
+
+/* Modal Backdrop & Perfect Centering System */
+.modal-backdrop-luxury {
+  background: rgba(15, 11, 8, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  z-index: 99999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-backdrop-luxury.hidden {
+  display: none !important;
+}
+
+.modal-backdrop-luxury > div {
+  position: relative !important;
+  margin: auto !important;
+  max-height: calc(100vh - 2rem) !important;
+  max-height: calc(100dvh - 2rem) !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  animation: modalScaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Order Online Cart Drawer & Overlay System */
+#cartOverlay {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(15, 11, 8, 0.65) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  z-index: 99998 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+#cartOverlay.hidden {
+  display: none !important;
+}
+
+#cartDrawer {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  max-width: 440px !important;
+  background: #ffffff !important;
+  z-index: 99999 !important;
+  transform: translateX(100%) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.35) !important;
+}
+
+#cartDrawer.open {
+  transform: translateX(0) !important;
+}
+
+
